@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Movieverse - Registro</title>
+    <meta name="description" content="Página de registro de Movieverse.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link href="img/favicon3.png" rel="shortcut icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            background-color: #1a1a1a; /* color de fondo oscuro */
+            color: white;
+            font-family: 'Roboto', sans-serif;
+        }
+        .register-section {
+            padding: 100px 0;
+        }
+        .register-form {
+            background-color: rgba(0,0,0,0.7);
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .register-form h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #f50057; /* fucsia */
+        }
+        .register-form input {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+        }
+        .register-form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #2196f3; /* azul */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .register-form button:hover {
+            background-color: #f50057; /* fucsia al pasar el ratón */
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px 0;
+            color: white;
+        }
+        a {
+            color: #2196f3;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #f50057;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header simplificado -->
+    <header class="header-section" style="padding: 0px 0;">
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            
+            <img src="img/MovieverseFooter3.png" alt="Logo Movieverse" style="height: 50px;">   
+        </div>
+    </header>
+
+    <!-- Registro -->
+    <section class="register-section">
+        <div class="register-form">
+            <h2>Crea tu cuenta</h2>
+            <form id="register-form">
+                <input type="text" id="nombre" placeholder="Nombre" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Contraseña" required>
+                <input type="password" id="repassword" placeholder="Repite contraseña" required>
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; <script>document.write(new Date().getFullYear());</script> Movieverse. Todos los derechos reservados.
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        // Redirección al enviar
+        document.getElementById('register-form').addEventListener('submit', function(e){
+            e.preventDefault();
+            let nombre = document.getElementById('nombre').value.trim();
+            let email = document.getElementById('email').value.trim();
+            let pass = document.getElementById('password').value.trim();
+            let repass = document.getElementById('repassword').value.trim();
+
+            if(nombre && email && pass && repass){
+                if(pass !== repass){
+                    alert("Las contraseñas no coinciden");
+                    return;
+                }
+                // Redirige a la página de inicio
+                window.location.href = "index.html";
+            } else {
+                alert("Por favor, rellena todos los campos");
+            }
+        });
+    </script>
+
+</body>
+</html>
