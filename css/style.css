@@ -644,7 +644,7 @@ ol {
 
 .tournament-item .ti-text p span {
 	font-weight: 500;
-	color: #ff205f;
+	color: #1E90FF;
 }
 
 /*----------------------
@@ -1703,5 +1703,58 @@ ol {
 		position: relative;
 		padding-bottom: 65px;
 	}
+
+	.main-menu {
+		position: relative;
+		z-index: 9999;
+	}
+
+	.article-title {
+		font-size: 46px !important;
+		line-height: 1.2;
+		margin-bottom: 20px;
+		word-break: break-word;
+	}
+
+	.site.btn,
+	.site-btn:hover,
+	.site-btn:focus,
+	.site-btn:active {
+		background-color: #ff205f;
+		color: white;
+		border: none;
+		box-shadow: none;
+	}
+
+	.header-section .main-menu li a {
+		color: #1E90FF; 
+		transition: color 0.3s;
+	}
+
+	.header-section .main-menu li a:hover,
+	.header-section .main-menu li a:focus {
+		color: #ff205f;
+	}
+
+	.user-panel a {
+		position: relative;
+		z-index: 2000;
+		cursor: pointer;
+	}
+
+	.user-panel a {
+		color: #ffffff;
+		transition: color 0.3s ease;
+	}
+
+	.user-panel a:hover {
+		color: #ff205f;
+		text-decoration: none;
+	}
+
+	.user-panel {
+		margin-right: 30px;
+	}
+
 
 
